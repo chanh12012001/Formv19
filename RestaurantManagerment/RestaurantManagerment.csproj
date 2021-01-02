@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59985DCA-3E42-4BEF-97C6-9364205DF35A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RestaurantManagerment</RootNamespace>
+    <AssemblyName>RestaurantManagerment</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>C:\Users\Admin\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bao\Guna\guna-master\_Getintopc.com_Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.113.1\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.113.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.113.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChuyenBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChuyenBan.Designer.cs">
+      <DependentUpon>FormChuyenBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tab1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab1.Designer.cs">
+      <DependentUpon>Tab1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab1_1BanAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab1_1BanAn.Designer.cs">
+      <DependentUpon>Tab1_1BanAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tab1_2ThongTinBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tab1_2ThongTinBan.Designer.cs">
+      <DependentUpon>tab1_2ThongTinBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab2.Designer.cs">
+      <DependentUpon>Tab2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tab2_1ThongTinMonAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tab2_1ThongTinMonAn.Designer.cs">
+      <DependentUpon>tab2_1ThongTinMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab2_2NhomMonAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab2_2NhomMonAn.Designer.cs">
+      <DependentUpon>Tab2_2NhomMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab2_3ThongTinNguyenLieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab2_3ThongTinNguyenLieu.Designer.cs">
+      <DependentUpon>Tab2_3ThongTinNguyenLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab3.Designer.cs">
+      <DependentUpon>Tab3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab3_1QuanLiNhanSu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab3_1QuanLiNhanSu.Designer.cs">
+      <DependentUpon>Tab3_1QuanLiNhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab3_2QuanLiTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab3_2QuanLiTaiKhoan.Designer.cs">
+      <DependentUpon>Tab3_2QuanLiTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab4.Designer.cs">
+      <DependentUpon>Tab4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab4_1QuanLiHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab4_1QuanLiHoaDon.Designer.cs">
+      <DependentUpon>Tab4_1QuanLiHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab4_2QuanLiPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab4_2QuanLiPhieuNhap.Designer.cs">
+      <DependentUpon>Tab4_2QuanLiPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab5.Designer.cs">
+      <DependentUpon>Tab5.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormChuyenBan.resx">
+      <DependentUpon>FormChuyenBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tab1.resx">
+      <DependentUpon>Tab1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab1_1BanAn.resx">
+      <DependentUpon>Tab1_1BanAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tab1_2ThongTinBan.resx">
+      <DependentUpon>tab1_2ThongTinBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab2.resx">
+      <DependentUpon>Tab2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tab2_1ThongTinMonAn.resx">
+      <DependentUpon>tab2_1ThongTinMonAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab2_2NhomMonAn.resx">
+      <DependentUpon>Tab2_2NhomMonAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab2_3ThongTinNguyenLieu.resx">
+      <DependentUpon>Tab2_3ThongTinNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab3.resx">
+      <DependentUpon>Tab3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab3_1QuanLiNhanSu.resx">
+      <DependentUpon>Tab3_1QuanLiNhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Database\NHAHANG.db" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhahang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khach-san-da-nang-gan-bien1.jpg1_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tab3_2QuanLiTaiKhoan.resx">
+      <DependentUpon>Tab3_2QuanLiTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab4.resx">
+      <DependentUpon>Tab4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab4_1QuanLiHoaDon.resx">
+      <DependentUpon>Tab4_1QuanLiHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab4_2QuanLiPhieuNhap.resx">
+      <DependentUpon>Tab4_2QuanLiPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab5.resx">
+      <DependentUpon>Tab5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bunifu\Bunifu_UI_v1.52.dll" />
+    <Content Include="Guna\Guna.UI.dll" />
+    <None Include="Resources\icons8_tableware_48px.png" />
+    <None Include="Resources\icons8_restaurant_table_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{40c41490-5d5c-41b6-aba3-4dd650a4b686}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{ed57fd55-88ce-4d74-baa7-f562d1a461d8}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{5f3fe2f1-9916-49ce-b925-3cd98b0f3f03}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets')" />
+</Project>
